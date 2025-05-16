@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+    </head>
+    <body
+        class="flex h-screen w-screen items-center justify-center bg-neutral-800 text-neutral-200"
+    >
+        <div id="app" class="w-100 scale-150 border-2 p-10">
+            <form id="myForm" class="flex flex-col">
+                <label for="mail">
+                    I would like you to provide me with an email address and
+                    password:
+                </label>
+                <input
+                    placeholder="helo@gmail.com"
+                    type="email"
+                    id="mail"
+                    name="mail"
+                    class="mt-2 mb-2 border-2"
+                />
+
+                <input
+                    placeholder="StrongPa$$1"
+                    type="password"
+                    id="password"
+                    name="password"
+                    minlength="4"
+                    class="border-2"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-+.])[A-Za-z\d!@#$%^&*()\-+.]{8,}$"
+                    title="Password must be 8+ chars, with uppercase, lowercase, digit, and special char (!@#$%^&*()-+.)."
+                />
+                <button>Submit</button>
+            </form>
+        </div>
+    </body>
+    <script type="module" src="/src/main.js"></script>
+</html>
