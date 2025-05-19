@@ -9,27 +9,29 @@
     <body
         class="flex h-screen w-screen items-center justify-center bg-neutral-800 text-neutral-200"
     >
-        <div id="app" class="w-100 scale-150 border-2 p-10">
+        <div id="app" class="w-100 scale-150 rounded-2xl border-2 p-10">
             <form id="myForm" class="flex flex-col">
                 <label for="mail">
                     I would like you to provide me with an email address and
                     password:
                 </label>
                 <input
-                    placeholder="helo@gmail.com"
+                    placeholder="Hello123@gmail.com"
                     type="email"
                     id="mail"
                     name="mail"
-                    class="mt-2 mb-2 border-2"
+                    required
+                    class="mt-2 mb-2 rounded border-2 p-2 valid:outline-green-400 invalid:outline-red-400"
                 />
 
                 <input
-                    placeholder="StrongPa$$1"
+                    required
+                    placeholder="Hello@123"
                     type="password"
                     id="password"
                     name="password"
                     minlength="4"
-                    class="border-2"
+                    class="rounded border-2 p-2 valid:outline-green-400 invalid:outline-red-400"
                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-+.])[A-Za-z\d!@#$%^&*()\-+.]{8,}$"
                     title="Password must be 8+ chars, with uppercase, lowercase, digit, and special char (!@#$%^&*()-+.)."
                 />

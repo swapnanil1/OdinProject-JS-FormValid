@@ -18,7 +18,7 @@ export default function inputEvents() {
     }
     passwordInput.addEventListener('input', () => {
         const currentPassword = passwordInput.value
-        if (currentPassword.length > 0 && !isPasswordStrong(currentPassword)) {
+        if (currentPassword.length < 0 || !isPasswordStrong(currentPassword)) {
             if (passwordInput.validity.tooShort) {
                 passwordInput.setCustomValidity(
                     `Password must be at least ${passwordInput.minLength} characters long.`
