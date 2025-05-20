@@ -12,8 +12,9 @@
         <div id="app" class="w-100 scale-150 rounded-2xl border-2 p-10">
             <form id="myForm" class="flex flex-col">
                 <label for="mail">
-                    I would like you to provide me with an email address and
-                    password:
+                    <!-- I would like you to provide me with an email address and
+                    password: -->
+                    Username
                 </label>
                 <input
                     placeholder="Hello123@gmail.com"
@@ -23,7 +24,7 @@
                     required
                     class="mt-2 mb-2 rounded border-2 p-2 valid:outline-green-400 invalid:outline-red-400"
                 />
-
+                <label for="password">Password</label>
                 <input
                     required
                     placeholder="Hello@123"
@@ -31,10 +32,37 @@
                     id="password"
                     name="password"
                     minlength="4"
-                    class="rounded border-2 p-2 valid:outline-green-400 invalid:outline-red-400"
+                    class="mb-2 rounded border-2 p-2 valid:outline-green-400 invalid:outline-red-400"
                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-+.])[A-Za-z\d!@#$%^&*()\-+.]{8,}$"
                     title="Password must be 8+ chars, with uppercase, lowercase, digit, and special char (!@#$%^&*()-+.)."
                 />
+                <input
+                    required
+                    placeholder="Repeat Password"
+                    type="cPassword"
+                    id="cPassword"
+                    name="cPassword"
+                    minlength="4"
+                    class="absolute mb-2 origin-top scale-y-0 rounded border-2 p-2 opacity-0 transition-transform duration-300 valid:outline-green-400 invalid:outline-red-400"
+                    title="Password must be 8+ chars, with uppercase, lowercase, digit, and special char (!@#$%^&*()-+.)."
+                />
+                <div class="flex items-center gap-1">
+                    <label for="country">Country</label>
+                    <select
+                        class="w-24 rounded bg-neutral-700"
+                        name="country"
+                        id="country"
+                    >
+                        <option value="in">India</option>
+                        <option value="usa">America</option>
+                        <option value="ch">China</option>
+                        <option value="ru">Russia</option>
+                    </select>
+                    <label for="postal"
+                        >Postal
+                        <input class="w-24 rounded border-2" type="text" />
+                    </label>
+                </div>
                 <button>Submit</button>
             </form>
         </div>
